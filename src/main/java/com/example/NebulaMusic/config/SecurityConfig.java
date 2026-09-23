@@ -17,7 +17,7 @@ public class SecurityConfig {
                     .authorizeHttpRequests(auth -> auth
                             .requestMatchers("/", "/index", "/iniciar-sesion", "/registro").permitAll()
                             .requestMatchers("/crear-cuenta", "/autentication").permitAll()
-                            .requestMatchers("/static/**", "/css/**", "/js/**", "/images/**").permitAll()
+                            .requestMatchers("/static/**", "/css/**", "/js/**", "/images/**", "/gridlayout.html").permitAll()
                             .requestMatchers("/", "/index", "/index.html", "/iniciar-sesion",
                                     "/iniciar-sesion.html", "/registro", "/registro.html").permitAll()
                             .anyRequest().authenticated()
@@ -26,7 +26,3 @@ public class SecurityConfig {
         }
 
     }
-
-
-
-

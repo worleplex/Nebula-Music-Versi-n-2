@@ -15,6 +15,7 @@
     --links-hover-dark: #8D91C7;   /* Color de enlaces al pasar el mouse */
     --nav-links: #8d3fd1;          /* Color de enlaces de navegación */
     --highlight: #EDF67D;          /* Color de acento/resaltados */
+    --card--bg-dark: #1c1a05;
 }
 
 /* Reset básico de márgenes, paddings y modelo de caja */
@@ -40,4 +41,123 @@ a {
 
 a:hover {
     color: var(--links-hover-dark);
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    padding: 40px 20px;
+}
+
+.auth-card {
+    background-color: var(--card--bg-dark);
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border: 1px solid #2a280a;
+    transition: max-width 0.3s ease; /* ease */
+}
+
+.form-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-logo img {
+    height: 80px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    font-size: 1.8rem;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    font-size: .9rem;
+    color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #cbd5e0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #444;
+    background-color: #2a280a;
+    color: var(--text-color-dark);
+    font-family: 'Quicksand', sans-serif;
+    font-size: .95rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+    border-color: var(--highlight);
+    box-shadow: 0 0 8px rgba(237,256,125,0.3);
+}
+
+input:required,
+select:required {
+    border-left: 4px solid var(--nav-links);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color: var(--nav-links);
+    color: white;
+}
+
+.btn-secundary {
+    background-color: transparent;
+    border: 1px solid #cbd5e0;
+    color: #cbd5e0;
+}
+
+.btn-primary:hover {
+    background-color: var(--highlight);
+    color: black;
+}
+
+.btn-secundary:hover {
+    background-color: #cbd5e0;
+    color: black;
 }
